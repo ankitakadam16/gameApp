@@ -1,11 +1,34 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 	<title>MY APP</title>
+	<meta charset="utf-8"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<script src='app.js'></script>
 </head>
 <body ng-app="myApp" ng-controller="myAppController">
-
+<div>
+<div>
+	Guess Left : {{guess}}
+</div>
+<div>
+	Incorrect : <span ng-repeat="l in wrong">
+	{{l}}
+	</span>
+</div>
+<div>
+	orrect : <span ng-repeat="c in correct">
+	{{c}}
+	</span>
+</div>
+<div>You have to guess</div>
+<div>
+	<div>
+		<input type="text" name="guess" ng-model="input.letter">
+		<button ng-click="letterChoose()">Submit</button>
+	</div>
+</div>
+</div>
 </body>
 </html>
